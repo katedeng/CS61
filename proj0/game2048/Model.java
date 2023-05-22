@@ -5,7 +5,7 @@ import java.util.Observable;
 
 
 /** The state of a game of 2048.
- *  @author TODO: YOUR NAME HERE
+ *  @author TODO:Yingying Deng
  */
 public class Model extends Observable {
     /** Current contents of the board. */
@@ -138,6 +138,13 @@ public class Model extends Observable {
      * */
     public static boolean emptySpaceExists(Board b) {
         // TODO: Fill in this function.
+        for(int col=0;col<b.size();col++){
+            for (int row=0;row<b.size();row++){
+                if (b.tile(col,row)==null){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
@@ -148,6 +155,14 @@ public class Model extends Observable {
      */
     public static boolean maxTileExists(Board b) {
         // TODO: Fill in this function.
+        for (int col=0; col<b.size(); col++) {
+            for (int row = 0; row < b.size(); row++) {
+                Tile t = b.tile(col, row);
+                if (t !=null && t.value() == MAX_PIECE) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
@@ -159,6 +174,37 @@ public class Model extends Observable {
      */
     public static boolean atLeastOneMoveExists(Board b) {
         // TODO: Fill in this function.
+        // check there is at least an empty tile on the board.
+        for (int col=0; col < b.size(); col++){
+            for (int row =0; row < b.size(); row++){
+                Tile t=b.tile(col, row);
+                if (t==null){
+                    return true;
+                }
+            }
+        }
+        // check there are two adjacent tiles with the same value.
+        for (int col=0; col<b.size(); col++){
+            for (int row=0; row<b.size(); row++){
+                Tile cur_t=b.tile(col,row);
+                if (cur_t!= null){
+                    // check the left tile is the same with the current tile
+                    if (col>0  && cur_t.value() ==b.tile(col-1,row).value()){
+                        return true;
+                    }
+                    // check the right tile
+                    if (col<b.size()-1  && cur_t.value() ==b.tile(col+1,row).value()){
+                        return true;
+                    }
+                    if (row>0 &&  cur_t.value() ==b.tile(col,row-1).value() ){
+                        return true;
+                    }
+                    if (row<b.size()-1  && cur_t.value() ==b.tile(col,row+1).value()){
+                        return true;
+                    }
+                }
+            }
+        }
         return false;
     }
 
