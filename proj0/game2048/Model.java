@@ -113,48 +113,65 @@ public class Model extends Observable {
         // TODO: Modify this.board (and perhaps this.score) to account
         // for the tilt to the Side SIDE. If the board changed, set the
         // changed local variable to true.
-        for (int col=0; col<board.size(); col++){
-            if (processColumn(col)){
-                changed=true;
-            }
-        }
-        // process  a given column
-        private boolean processColumn(Board board, int col){
-            boolean changed=false;
-            for (int row=2; row>=0; row--){
-                Tile currentTile=board.tile(col,row);
-                if (currentTile==null){
-                    continue;
-                }
-                int targetRow=findTargetRow(col,row);
-                if (targetRow != row){
-                    board.move(col,targetRow,currentTile);
-                    score +=board.tile(col,targetRow).value();
-                    changed=true;
+        if (side == Side.NORTH) {
+            for (int col = 0; col < board.size(); col++) {
+                if (processColumn(col)) {
+                    changed = true;
                 }
             }
-            return changed;
         }
-        private int findTargetRow(int col, int startRow){
-            for (int row=startRow-1;row>=0;row--){
-                // check the target tile is empty.
-                if (board.tile(col,row)==null){
-                    return row;
-                }
-                // check the target row and the start row have the same values.
-                else if (board.tile(col,row).value()==board.tile(col,startRow).value()){
-                    return row+1;
-                }
-                return startRow;
-            }
-        }
-
 
         checkGameOver();
         if (changed) {
             setChanged();
         }
         return changed;
+    }
+    private boolean processColumn(int col){
+        boolean changed = false;
+        for (int row = 2; row >= 0; row--) {
+            Tile currentTile = board.tile(col, row);
+            System.out.println(currentTile );
+            if (currentTile == null) {
+                continue;
+            }
+            int targetRow = findTargetRow(col, row);
+            System.out.println(targetRow);
+            if (targetRow != row) {
+                Tile targetTile=board.tile(col,targetRow);
+                System.out.println(targetTile );
+                int mergedValue=currentTile.value()*2;
+                if (targetTile != null){
+                    mergedValue +=targetTile.value();
+                    board.move(col, targetRow, currentTile );
+                    score +=mergedValue;
+                    if (score > maxScore){
+                        maxScore = score;
+                    }
+                }
+                board.move(col, targetRow, currentTile );
+                System.out.println(board );
+                changed = true;
+            }
+        }
+        return changed;
+    }
+
+    private int findTargetRow(int col, int startRow){
+        for (int row = startRow+1; row<board.size() ; row++) {
+            // check the target tile is empty.
+            if (board.tile(col, row) == null) {
+                System.out.println(row);
+                return row;
+            }
+            // check the target row and the start row have the same values.
+            else if (board.tile(col, row).value() == board.tile(col, startRow).value()) {
+                System.out.println(row);
+                return row;
+            }
+        }
+        System.out.println(startRow );
+        return startRow;
     }
 
     /** Checks if the game is over and sets the gameOver variable
