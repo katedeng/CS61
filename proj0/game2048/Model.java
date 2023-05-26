@@ -113,46 +113,41 @@ public class Model extends Observable {
         // TODO: Modify this.board (and perhaps this.score) to account
         // for the tilt to the Side SIDE. If the board changed, set the
         // changed local variable to true.
-        for (int col=0; col<board.size(); col++){
-            if (processColumn(col)){
+        for (int col=0;col<board.size(); col++){
+            if (processColumn(col) ){
                 changed=true;
             }
         }
-        // process  a given column
-        private boolean processColumn(Board board, int col){
-            boolean changed=false;
-            for (int row=2; row>=0; row--){
-                Tile currentTile=board.tile(col,row);
-                if (currentTile==null){
-                    continue;
-                }
-                int targetRow=findTargetRow(col,row);
-                if (targetRow != row){
-                    board.move(col,targetRow,currentTile);
-                    score +=board.tile(col,targetRow).value();
-                    changed=true;
-                }
-            }
-            return changed;
-        }
-        private int findTargetRow(int col, int startRow){
-            for (int row=startRow-1;row>=0;row--){
-                // check the target tile is empty.
-                if (board.tile(col,row)==null){
-                    return row;
-                }
-                // check the target row and the start row have the same values.
-                else if (board.tile(col,row).value()==board.tile(col,startRow).value()){
-                    return row+1;
-                }
-                return startRow;
-            }
-        }
-
 
         checkGameOver();
         if (changed) {
             setChanged();
+        }
+        return changed;
+    }
+    private boolean processColumn(int col){
+        boolean changed=false;
+        int topPointer=board.size()-1;
+        Tile topTile=board.tile(col,topPointer);
+        for (int row=board.size()-1; row>=0; row--){
+            Tile currentTile=board.tile(col,row);
+            if (currentTile==null) continue;
+            if (topTile ==null && currentTile !=null){
+                board.move(col,topPointer,currentTile);
+                topTile=currentTile;
+                changed=true;
+            }else if (topTile.value() == currentTile.value() && topTile != currentTile ){
+                board.move(col,topPointer,currentTile);
+                score +=board.tile(col,topPointer).value();
+                topPointer -=1;
+                topTile=board.tile(col,topPointer );
+                changed=true;
+            }else if (topTile.value() != currentTile.value()){
+                board.move(col,topPointer-1,currentTile);
+                topPointer -=1;
+                topTile=board.tile(col,topPointer);
+                changed=true;
+            }
         }
         return changed;
     }
