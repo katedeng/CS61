@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62cd3d24-7109-4d78-bfaf-74587751a2fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/game2048/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/game2048/Model.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="TestUpOnly.testUpNoMerge" />
+    </enabled-run-configurations>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2Q5iPlxjrQhngozYrwNjeLpdle8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/kate/cs61/proj0",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.TestUpOnly">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game2048.Main" />
+      <module name="proj0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game2048.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAtLeastOneMoveExists" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="proj0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game2048.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game2048" />
+      <option name="MAIN_CLASS_NAME" value="game2048.TestAtLeastOneMoveExists" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMaxTileExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game2048.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game2048" />
+      <option name="MAIN_CLASS_NAME" value="game2048.TestMaxTileExists" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpOnly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj0" />
+      <target name="WSL - Ubuntu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game2048.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game2048" />
+      <option name="MAIN_CLASS_NAME" value="game2048.TestUpOnly" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpOnly.testUpNoMerge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game2048.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game2048" />
+      <option name="MAIN_CLASS_NAME" value="game2048.TestUpOnly" />
+      <option name="METHOD_NAME" value="testUpNoMerge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUpOnly.testUpTripleMerge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game2048.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game2048" />
+      <option name="MAIN_CLASS_NAME" value="game2048.TestUpOnly" />
+      <option name="METHOD_NAME" value="testUpTripleMerge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.TestAtLeastOneMoveExists" />
+      <item itemvalue="JUnit.TestMaxTileExists" />
+      <item itemvalue="JUnit.TestUpOnly.testUpTripleMerge" />
+      <item itemvalue="JUnit.TestUpOnly" />
+      <item itemvalue="JUnit.TestUpOnly.testUpNoMerge" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestUpOnly" />
+        <item itemvalue="JUnit.TestUpOnly.testUpNoMerge" />
+        <item itemvalue="JUnit.TestUpOnly.testUpTripleMerge" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestMaxTileExists" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62cd3d24-7109-4d78-bfaf-74587751a2fa" name="Changes" comment="" />
+      <created>1684649821270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684649821270</updated>
+      <workItem from="1684649822448" duration="11999000" />
+      <workItem from="1684900942815" duration="13138000" />
+      <workItem from="1684958814602" duration="13378000" />
+      <workItem from="1685124096425" duration="16055000" />
+      <workItem from="1685158487653" duration="414000" />
+      <workItem from="1685483580798" duration="440000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/game2048/TestUpOnly.java</url>
+          <line>61</line>
+          <properties class="game2048.TestUpOnly" method="testUpTripleMerge">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
