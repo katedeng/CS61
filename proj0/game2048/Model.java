@@ -107,6 +107,11 @@ public class Model extends Observable {
      *    and the trailing tile does not.
      * */
     public boolean tilt(Side side) {
+
+        // TODO: Modify this.board (and perhaps this.score) to account
+        // for the tilt to the Side SIDE. If the board changed, set the
+        // changed local variable to true.
+
         switch (side) {
             case NORTH:
                 board.setViewingPerspective(Side.NORTH);
@@ -169,6 +174,7 @@ public class Model extends Observable {
         }
         return changed;
     }
+
 
     /** Checks if the game is over and sets the gameOver variable
      *  appropriately.
