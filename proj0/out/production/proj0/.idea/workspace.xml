@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62cd3d24-7109-4d78-bfaf-74587751a2fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../HW0/QuickMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW0/ExtraIntListPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW0/ExtraIntListPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW0/IntNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW0/IntNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW0/SLListSentinel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW0/SLListSentinel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW0/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW0/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/IntList/IntListExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/IntList/IntListExercises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/IntList/SquarePrimesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/IntList/SquarePrimesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game2048/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/game2048/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj0/game2048/TestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj0/game2048/TestUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JavaAutoRunManager">
     <enabled-run-configurations>
@@ -28,23 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/kate/cs61/proj0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/kate/cs61/proj1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.TestUpOnly">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game2048.Main" />
@@ -74,7 +84,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMaxTileExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proj0" />
       <extension name="coverage">
         <pattern>
@@ -83,7 +93,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="game2048" />
-      <option name="MAIN_CLASS_NAME" value="game2048.TestMaxTileExists" />
+      <option name="MAIN_CLASS_NAME" value="game2048.TestModel" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,7 +151,7 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestAtLeastOneMoveExists" />
-      <item itemvalue="JUnit.TestMaxTileExists" />
+      <item itemvalue="JUnit.TestModel" />
       <item itemvalue="JUnit.TestUpOnly.testUpTripleMerge" />
       <item itemvalue="JUnit.TestUpOnly" />
       <item itemvalue="JUnit.TestUpOnly.testUpNoMerge" />
@@ -149,10 +159,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestUpOnly" />
+        <item itemvalue="JUnit.TestModel" />
         <item itemvalue="JUnit.TestUpOnly.testUpNoMerge" />
         <item itemvalue="JUnit.TestUpOnly.testUpTripleMerge" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestMaxTileExists" />
       </list>
     </recent_temporary>
   </component>
@@ -169,12 +179,26 @@
       <workItem from="1684958814602" duration="13378000" />
       <workItem from="1685124096425" duration="16055000" />
       <workItem from="1685158487653" duration="414000" />
-      <workItem from="1685483580798" duration="440000" />
+      <workItem from="1685483580798" duration="2124000" />
+      <workItem from="1685564874093" duration="18000" />
+      <workItem from="1685565529558" duration="196000" />
+      <workItem from="1685565803222" duration="58000" />
+      <workItem from="1685566647474" duration="19000" />
+      <workItem from="1685568578437" duration="5000" />
+      <workItem from="1685569864019" duration="33000" />
+      <workItem from="1685570729719" duration="32000" />
+      <workItem from="1685571367362" duration="68000" />
+      <workItem from="1685571474344" duration="849000" />
+      <workItem from="1685650429608" duration="45000" />
+      <workItem from="1686114019728" duration="1013000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

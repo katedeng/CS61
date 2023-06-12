@@ -107,60 +107,64 @@ public class Model extends Observable {
      *    and the trailing tile does not.
      * */
     public boolean tilt(Side side) {
-        boolean changed;
-        changed = false;
-
-        // TODO: Modify this.board (and perhaps this.score) to account
-        // for the tilt to the Side SIDE. If the board changed, set the
-        // changed local variable to true.
-        if (side==Side.NORTH ) {
-            for (int col = 0; col < board.size(); col++) {
-                if (processColumn(col)) {
-                    changed = true;
-                }
-            }
-        }else if (side==Side.WEST ){
-            board.setViewingPerspective(Side.WEST ) ;
-            board.tilt(Side.NORTH );
-            board.setViewingPerspective(Side.NORTH );
-        }else if (side==Side.EAST  ){
-            board.setViewingPerspective(Side.EAST  ) ;
-            board.tilt(Side.NORTH );
-            board.setViewingPerspective(Side.NORTH );
-        }else if (side==Side.SOUTH ){
-            board.setViewingPerspective(Side.SOUTH ) ;
-            board.tilt(Side.NORTH );
-            board.setViewingPerspective(Side.NORTH );
+        switch (side) {
+            case NORTH:
+                board.setViewingPerspective(Side.NORTH);
+            case SOUTH:
+                board.setViewingPerspective(Side.SOUTH);
+            case EAST:
+                board.setViewingPerspective(Side.EAST);
+            case WEST:
+                board.setViewingPerspective(Side.WEST);
         }
+
+        boolean changed = helpTilt(side);
 
         checkGameOver();
         if (changed) {
+            board.setViewingPerspective(Side.NORTH);
             setChanged();
         }
         return changed;
     }
-    private boolean processColumn(int col){
-        boolean changed=false;
-        int topPointer=board.size()-1;
-        Tile topTile=board.tile(col,topPointer);
-        for (int row=board.size()-1; row>=0; row--){
-            Tile currentTile=board.tile(col,row);
-            if (currentTile==null) continue;
-            if (topTile ==null && currentTile !=null){
-                board.move(col,topPointer,currentTile);
-                topTile=currentTile;
-                changed=true;
-            }else if (topTile.value() == currentTile.value() && topTile != currentTile ){
-                board.move(col,topPointer,currentTile);
-                score +=board.tile(col,topPointer).value();
-                topPointer -=1;
-                topTile=board.tile(col,topPointer );
-                changed=true;
-            }else if (topTile.value() != currentTile.value()){
-                board.move(col,topPointer-1,currentTile);
-                topPointer -=1;
-                topTile=board.tile(col,topPointer);
-                changed=true;
+
+    public boolean helpTilt(Side side) {
+
+        boolean changed;
+        changed = false;
+        int s = board.size();
+
+        board.setViewingPerspective(side);
+        if(side != Side.NORTH) {
+            changed = true;
+        }
+        for (int c = 0; c < s; c ++) {
+            // iterate from the top row
+            int topPointer = s - 1;
+            Tile top = board.tile(c, topPointer);
+            for (int r = s - 1; r >= 0; r --) {
+                // get current tile
+                Tile t = board.tile(c, r);
+                if (t == null) continue;
+                // if top is null, current tile can move up to the top
+                if (top == null) {
+                    board.move(c, topPointer, t);
+                    top = t;
+                    changed = true;
+                }
+                else if (top.value() == t.value() && top != t) {
+                    board.move(c, topPointer, t);
+                    changed = true;
+                    score += board.tile(c, topPointer).value();
+                    topPointer --;
+                    top = board.tile(c, topPointer);
+                }
+                else if (top.value() != t.value()) {
+                    board.move(c, topPointer - 1, t);
+                    changed = true;
+                    topPointer --;
+                    top = board.tile(c, topPointer);
+                }
             }
         }
         return changed;
