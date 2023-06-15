@@ -1,4 +1,4 @@
-public class SLListSentinel{
+public class SLList{
     public class IntNode {
         public int item;
         public IntNode next;
@@ -10,7 +10,7 @@ public class SLListSentinel{
     /** the first item (if it exists) is at sentinel.next.*/
     private IntNode sentinel;
     private int size;
-    // create an empty SSList.
+    // create an empty SLList.
     public SLList(){
          sentinel = new IntNode(100,null);
          size = 0;
